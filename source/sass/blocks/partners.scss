@@ -55,7 +55,7 @@
   }
 }
 
-.partners__item:not(:last-child) {
+.partners__item:not(:first-child):not(:last-child) {
   margin-bottom: 20px;
 
   @include vp-768 {
@@ -65,6 +65,19 @@
   @include vp-1280 {
     margin-right: 30px;
     margin-bottom: 30px;
+  }
+}
+
+.partners__item:nth-child(2) {
+  margin-top: 20px;
+
+  @include vp-768 {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  @include vp-1280 {
+    margin-left: 30px;
   }
 }
 
