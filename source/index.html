@@ -1,15 +1,140 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello World</title>
-    <meta name="description" content="@@description">
-    <meta name="keywords" content="@@keywords">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестовое задание QSOFT">
+    <title>QSOFT</title>
+    <link rel="preload" href="./fonts/roboto-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/roboto-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <body class="page__body">
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper container">
+          <a class="header__logo logo" href="#">
+            <img class="logo__img" src="./img/qsoft-logo.svg" width="135" height="30" alt="Логотип компании QSOFT.">
+          </a>
 
+          <form class="header__search search" action="#" method="post">
+            <fieldset class="search__fieldset">
+              <label class="visually-hidden" for="search-input">Найти информацию на сайте.</label>
+              <input class="search__input" id="search-input" type="search" name="search" placeholder="Найти...">
+            </fieldset>
+            <button class="search__button" type="submit">
+              <span class="visually-hidden">Найти.</span>
+            </button>
+          </form>
+
+          <a class="header__user user" href="#">
+            <span class="user__name">Константин</span>
+            <picture>
+              <source type="image/webp" srcset="./img/users/user.webp 1x, ./img/users/user@2x.webp 2x">
+              <img class="user__avatar" src="./img/users/user.jpeg" srcset="./img/users/user@2x.jpeg 2x" width="40" height="40" alt="Аватар пользователя.">
+            </picture>
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <h1 class="visually-hidden">Тестовое задание "QSOFT"</h1>
+
+        <section class="partners">
+          <div class="partners__wrapper container">
+            <h2 class="partners__title">Наши партнеры</h2>
+
+            <ul class="partners__list">
+              <li class="partners__item">
+                <a class="partners__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="./img/partners/henkel-desktop.webp 1x, ./img/partners/henkel-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/partners/henkel-tablet.webp 1x, ./img/partners/henkel-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/partners/henkel-mobile.webp 1x, ./img/partners/henkel-mobile@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="./img/partners/henkel-desktop.jpg 1x, ./img/partners/henkel-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/partners/henkel-tablet.jpg 1x, ./img/partners/henkel-tablet@2x.jpg 2x">
+                    <img class="partners__img" src="./img/partners/henkel-mobile.png" srcset="./img/partners/henkel-mobile@2x.png 2x" width="285" height="90" alt="Логотип партнера Henkel.">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="./img/partners/john-deere-desktop.webp 1x, ./img/partners/john-deere-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/partners/john-deere-tablet.webp 1x, ./img/partners/john-deere-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/partners/john-deere-mobile.webp 1x, ./img/partners/john-deere-mobile@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="./img/partners/john-deere-desktop.jpg 1x, ./img/partners/john-deere-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/partners/john-deere-tablet.jpg 1x, ./img/partners/john-deere-tablet@2x.jpg 2x">
+                    <img class="partners__img" src="./img/partners/john-deere-mobile.png" srcset="./img/partners/john-deere-mobile@2x.png 2x" width="285" height="90" alt="Логотип партнера John-Deere.">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="./img/partners/mc-donalds-desktop.webp 1x, ./img/partners/mc-donalds-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/partners/mc-donalds-tablet.webp 1x, ./img/partners/mc-donalds-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/partners/mc-donalds-mobile.webp 1x, ./img/partners/mc-donalds-mobile@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="./img/partners/mc-donalds-desktop.jpg 1x, ./img/partners/mc-donalds-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/partners/mc-donalds-tablet.jpg 1x, ./img/partners/mc-donalds-tablet@2x.jpg 2x">
+                    <img class="partners__img" src="./img/partners/mc-donalds-mobile.png" srcset="./img/partners/mc-donalds-mobile@2x.png 2x" width="285" height="90" alt="Логотип партнера McDonalds.">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="./img/partners/ikea-desktop.webp 1x, ./img/partners/ikea-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/partners/ikea-tablet.webp 1x, ./img/partners/ikea-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/partners/ikea-mobile.webp 1x, ./img/partners/ikea-mobile@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="./img/partners/ikea-desktop.jpg 1x, ./img/partners/ikea-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/partners/ikea-tablet.jpg 1x, ./img/partners/ikea-tablet@2x.jpg 2x">
+                    <img class="partners__img" src="./img/partners/ikea-mobile.png" srcset="./img/partners/ikea-mobile@2x.png 2x" width="285" height="90" alt="Логотип партнера Ikea.">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="./img/partners/reebok-desktop.webp 1x, ./img/partners/reebok-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/partners/reebok-tablet.webp 1x, ./img/partners/reebok-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/partners/reebok-mobile.webp 1x, ./img/partners/reebok-mobile@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="./img/partners/reebok-desktop.jpg 1x, ./img/partners/reebok-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/partners/reebok-tablet.jpg 1x, ./img/partners/reebok-tablet@2x.jpg 2x">
+                    <img class="partners__img" src="./img/partners/reebok-mobile.png" srcset="./img/partners/reebok-mobile@2x.png 2x" width="285" height="90" alt="Логотип партнера Reebok.">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="./img/partners/nike-desktop.webp 1x, ./img/partners/nike-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/partners/nike-tablet.webp 1x, ./img/partners/nike-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/partners/nike-mobile.webp 1x, ./img/partners/nike-mobile@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="./img/partners/nike-desktop.jpg 1x, ./img/partners/nike-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/partners/nike-tablet.jpg 1x, ./img/partners/nike-tablet@2x.jpg 2x">
+                    <img class="partners__img" src="./img/partners/nike-mobile.png" srcset="./img/partners/nike-mobile@2x.png 2x" width="285" height="90" alt="Логотип партнера Nike.">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="./img/partners/caterpillar-desktop.webp 1x, ./img/partners/caterpillar-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/partners/caterpillar-tablet.webp 1x, ./img/partners/caterpillar-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/partners/caterpillar-mobile.webp 1x, ./img/partners/caterpillar-mobile@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="./img/partners/caterpillar-desktop.jpg 1x, ./img/partners/caterpillar-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/partners/caterpillar-tablet.jpg 1x, ./img/partners/caterpillar-tablet@2x.jpg 2x">
+                    <img class="partners__img" src="./img/partners/caterpillar-mobile.png" srcset="./img/partners/caterpillar-mobile@2x.png 2x" width="285" height="90" alt="Логотип партнера Caterpillar.">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
