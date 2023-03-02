@@ -1,0 +1,35 @@
+// Viewports
+// ---------------------------------
+
+@mixin vp-375 {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin vp-1280 {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// Hover
+// ---------------------------------
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  &:focus {
+    @content;
+  }
+}

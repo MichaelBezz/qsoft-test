@@ -1,1 +1,16 @@
-@import "global/fonts.scss";
+// Global
+// ---------------------------------
+
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+// ---------------------------------
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/search";
+@import "blocks/user";
+@import "blocks/partners";

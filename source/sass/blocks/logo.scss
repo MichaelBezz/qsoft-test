@@ -1,0 +1,12 @@
+.logo {
+  padding: 16px 0;
+
+  @include vp-768 {
+    padding: 25px 0;
+  }
+}
+
+.logo__img {
+  width: 135px;
+  height: 30px;
+}
