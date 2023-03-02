@@ -11,7 +11,7 @@ import browser from 'browser-sync';
 
 // Styles
 export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return gulp.src('source/sass/style.scss', {sourcemaps: true})
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -19,7 +19,7 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', {sourcemaps: '.'}))
     .pipe(browser.stream());
 }
 
@@ -31,7 +31,7 @@ const html = () => {
 
 // WebP
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{jpg,jpeg,png}')
     .pipe(squoosh({
       webp: {}
     }))
@@ -41,9 +41,8 @@ const createWebp = () => {
 // Copy
 const copy = () => {
   return gulp.src([
-    'source/img',
-    'source/fonts/*.{woff2,woff}',
-    'source/*.ico'
+    'source/img/**/*.{jpg,jpeg,png,svg}',
+    'source/fonts/*.{woff2,woff}'
   ], {
     base: 'source'
   })
@@ -58,9 +57,7 @@ const clean = () => {
 // Server
 const server = (done) => {
   browser.init({
-    server: {
-      baseDir: 'build'
-    },
+    server: {baseDir: 'build'},
     cors: true,
     notify: false,
     ui: false,
@@ -80,31 +77,5 @@ const watcher = () => {
   gulp.watch('source/**/*.html', gulp.series(html, reload));
 }
 
-// Default
-export default gulp.series(
-  clean,
-  copy,
-
-  gulp.parallel(
-    styles,
-    html,
-    createWebp
-  ),
-
-  gulp.series(
-    server,
-    watcher
-  )
-);
-
-// Build
-export const build = gulp.series(
-  clean,
-  copy,
-
-  gulp.parallel(
-    styles,
-    html,
-    createWebp
-  )
-);
+export default gulp.series(clean, copy, gulp.parallel(styles, html, createWebp), gulp.series(server, watcher));
+export const build = gulp.series(clean, copy, gulp.parallel(styles, html, createWebp));
